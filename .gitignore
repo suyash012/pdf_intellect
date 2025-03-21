@@ -1,0 +1,132 @@
+# Dependencies
+**/node_modules/
+**/venv/
+**/__pycache__/
+**/.pytest_cache/
+**/package-lock.json
+
+# Environment variables
+**/.env
+**/.env.local
+**/.env.development.local
+**/.env.test.local
+**/.env.production.local
+frontend/.env
+backend/.env
+
+# API Keys
+**/api_key.txt
+**/mistral_key.txt
+
+# PDF files (temporary uploads)
+**/uploads/*
+**/pdf_storage/*
+!**/uploads/.gitkeep
+!**/pdf_storage/.gitkeep
+backend/uploads/
+backend/pdf_storage/
+
+# Logs
+**/*.log
+**/npm-debug.log*
+**/yarn-debug.log*
+**/yarn-error.log*
+
+# Build files
+**/build/
+**/dist/
+**/.next/
+**/out/
+
+# Cache
+**/.cache/
+**/.eslintcache
+**/.sass-cache/
+**/.parcel-cache/
+**/.rpt2_cache/
+**/.rts2_cache_cjs/
+**/.rts2_cache_es/
+**/.rts2_cache_umd/
+
+# Testing
+**/coverage/
+
+# Production
+**/.DS_Store
+**/.vercel
+**/.netlify
+**/.firebase/
+
+# IDE specific files
+**/.idea/
+**/.vscode/
+**/*.swp
+**/*.swo
+**/.history/
+**/*.sublime-workspace
+
+# OS specific
+**/Thumbs.db
+**/ehthumbs.db
+**/Desktop.ini
+**/.directory
+
+# Python specific
+**/*.pyc
+**/*.pyo
+**/*.pyd
+**/*.so
+**/*.egg
+**/*.egg-info/
+**/dist/
+**/build/
+**/.Python
+**/env/
+**/develop-eggs/
+**/downloads/
+**/eggs/
+**/parts/
+**/sdist/
+**/var/
+**/wheels/
+
+# Python backend
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+env/
+.env
+.venv
+*.so
+.Python
+*.log
+instance/
+.webassets-cache
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Node/React frontend
+node_modules/
+/frontend/build
+/frontend/node_modules
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# PDFs and uploaded files
+pdfs/
+uploads/
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store 
