@@ -14,4 +14,4 @@ python-dotenv
 
 # Simplified requirements removing Rust dependencies
 # We'll use simpler NLP tools instead
-nltk 
+nltk
