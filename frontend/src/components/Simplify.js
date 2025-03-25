@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import apiClient from '../utils/apiclients';
 
 const Simplify = ({ pdfData }) => {
   const [simplifiedText, setSimplifiedText] = useState("");
@@ -22,7 +23,7 @@ const Simplify = ({ pdfData }) => {
         extract_method: "hybrid"
       };
       
-      const response = await axios.post('/simplify', requestData);
+      const response = await apiClient.post('/simplify', requestData);
       
       if (response.data.status === "success") {
         setSimplifiedText(response.data.simplified);

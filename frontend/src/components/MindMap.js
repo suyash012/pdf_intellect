@@ -18,6 +18,7 @@ import {
 import 'reactflow/dist/style.css';
 import axios from 'axios';
 import Spinner from './Spinner';
+import apiClient from '../utils/apiclients';
 
 // Create a context to store the mindmap data across navigation
 export const MindMapContext = React.createContext(null);
@@ -354,7 +355,7 @@ function MindMap({ pdfData }) {
       
       console.log("Generating mind map for:", pdfData.filename);
       
-      const response = await axios.post('/generate-mindmap', { 
+      const response = await apiClient.post('/generate-mindmap', { 
         filename: pdfData.filename,
         extract_method: "hybrid"
       });

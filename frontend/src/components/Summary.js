@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import apiClient from '../utils/apiclients';
 
 const Summary = ({ pdfData }) => {
   const [summary, setSummary] = useState('');
@@ -18,7 +19,7 @@ const Summary = ({ pdfData }) => {
       setError('');
       setWarning('');
       
-      const response = await axios.post('/summarize', {
+      const response = await apiClient.post('/summarize', {
         filename: pdfData.filename,
         extract_method: "hybrid",
         complexity

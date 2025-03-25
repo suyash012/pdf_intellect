@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import Spinner from './Spinner';
+import apiClient from '../utils/apiclients';
 
 function ChatComponent({ pdfData }) {
   const [messages, setMessages] = useState([]);
@@ -44,7 +45,7 @@ function ChatComponent({ pdfData }) {
     setLoading(true);
     
     try {
-      const response = await axios.post('/chat', {
+      const response = await apiClient.post('/chat', {
         message: input.trim(),
         filename: pdfData.filename,
         extract_method: "hybrid"

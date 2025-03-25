@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import ReactMarkdown from 'react-markdown';
+import apiClient from '../utils/apiclients';
 
 const Chat = ({ pdfData }) => {
   const [messages, setMessages] = useState([
@@ -59,7 +60,7 @@ const Chat = ({ pdfData }) => {
     setShowTypingIndicator(true);
     
     try {
-      const response = await axios.post('/chat', {
+      const response = await apiClient.post('/chat', {
         message: userMessage.content,
         filename: pdfData.filename,
         extract_method: "hybrid"
