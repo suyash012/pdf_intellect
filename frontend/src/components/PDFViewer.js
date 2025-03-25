@@ -149,7 +149,7 @@ const PDFViewer = ({ pdfData }) => {
         )}
         
         <Document
-          file={pdfData.filename ? `http://localhost:8000/pdfs/${pdfData.filename}` : null}
+          file={pdfData.filename ? `${process.env.REACT_APP_API_URL}/pdfs/${pdfData.filename}` : null}
           onLoadSuccess={onDocumentLoadSuccess}
           onLoadError={(error) => {
             setPdfError(error.message);
