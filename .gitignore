@@ -19,11 +19,11 @@ backend/.env
 **/mistral_key.txt
 
 # PDF files (temporary uploads)
-**/uploads/*
+
 **/pdf_storage/*
 !**/uploads/.gitkeep
 !**/pdf_storage/.gitkeep
-backend/uploads/
+
 backend/pdf_storage/
 
 # Logs
